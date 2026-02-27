@@ -84,18 +84,16 @@ elif not CLASS_NAMES:
     st.warning("⚠️ Class names not found! Please run `train_model.ipynb` to generate `class_names.json`.")
 
 REMEDIES = {
-    "Apple_scab": "Apply fungicides like captan or myclobutanil. Prune and destroy infected leaves.",
-    "Black_rot": "Remove mummified fruit. Use fungicides. Maintain good air circulation.",
-    "Bacterial_spot": "Use copper-based bactericides. Remove infected plant parts immediately.",
-    "Early_blight": "Apply copper fungicides. Rotate crops. Remove lower infected leaves.",
-    "Late_blight": "Destroy infected plants. Use resistant varieties. Apply fungicides preventively.",
-    "Powdery_mildew": "Use sulfur or neem oil. Improving air circulation helps reduce spread.",
-    "healthy": "Your plant looks healthy! Keep up the good work with regular watering and sunlight."
+    "bacterial spot": "Use copper-based bactericides. Remove infected plant parts immediately. Avoid overhead watering.",
+    "early blight": "Apply copper fungicides. Rotate crops. Remove lower infected leaves and ensure good spacing.",
+    "septoria leaf spot": "Remove infected leaves. Apply fungicides containing chlorothalonil or copper. Avoid splashing water on leaves.",
+    "tomato leaf": "Your plant looks healthy! Keep up the good work with regular watering and sunlight."
 }
 
 def get_remedy(disease_name):
+    disease_name_lower = disease_name.lower()
     for key, remedy in REMEDIES.items():
-        if key in disease_name:
+        if key in disease_name_lower:
             return remedy
     return "Consult a local agriculturist for specific treatment."
 
