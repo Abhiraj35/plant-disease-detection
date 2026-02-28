@@ -34,3 +34,5 @@ streamlit run app.py
 
 ## ⚠️ Note
 If you run the app *before* training the model, it will run in **Simulation Mode**, showing demo results to test the UI.
+
+For demo purposes, I have only included a tomato dataset and tested the system with it. However, we can easily tweak the code and add datasets for different plants to extend its functionality.
